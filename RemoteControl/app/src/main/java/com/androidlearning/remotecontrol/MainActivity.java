@@ -116,13 +116,12 @@ public class MainActivity extends AppCompatActivity {
         if (isChecked == true) {
             Power = true;
             ShowPower.setText("电源:开");
-            setButtonsEnabled();
         }
         else {
             Power = false;
             ShowPower.setText("电源:关");
-            setButtonsEnabled();
         }
+        setButtonsEnabled();
     }
     public void setButtonsEnabled() {
             Button0.setEnabled(Power);
