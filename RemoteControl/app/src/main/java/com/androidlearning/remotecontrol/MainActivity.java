@@ -116,55 +116,34 @@ public class MainActivity extends AppCompatActivity {
         if (isChecked == true) {
             Power = true;
             ShowPower.setText("电源:开");
+            setButtonsEnabled();
         }
         else {
             Power = false;
             ShowPower.setText("电源:关");
+            setButtonsEnabled();
         }
-        setButtonsEnabled();
     }
     public void setButtonsEnabled() {
-        if (Power == true) {
-            Button0.setEnabled(true);
-            Button1.setEnabled(true);
-            Button2.setEnabled(true);
-            Button3.setEnabled(true);
-            Button4.setEnabled(true);
-            Button5.setEnabled(true);
-            Button6.setEnabled(true);
-            Button7.setEnabled(true);
-            Button8.setEnabled(true);
-            Button9.setEnabled(true);
-            ButtonAdd.setEnabled(true);
-            ButtonReduce.setEnabled(true);
-            ButtonLike.setEnabled(true);
-            ButtonLike2.setEnabled(true);
-            ButtonLike3.setEnabled(true);
-            ButtonReset.setEnabled(true);
-        }
-        else {
-            Button0.setEnabled(false);
-            Button1.setEnabled(false);
-            Button2.setEnabled(false);
-            Button3.setEnabled(false);
-            Button4.setEnabled(false);
-            Button5.setEnabled(false);
-            Button6.setEnabled(false);
-            Button7.setEnabled(false);
-            Button8.setEnabled(false);
-            Button9.setEnabled(false);
-            ButtonAdd.setEnabled(false);
-            ButtonReduce.setEnabled(false);
-            ButtonLike.setEnabled(false);
-            ButtonLike2.setEnabled(false);
-            ButtonLike3.setEnabled(false);
-            ButtonReset.setEnabled(false);
-        }
+            Button0.setEnabled(Power);
+            Button1.setEnabled(Power);
+            Button2.setEnabled(Power);
+            Button3.setEnabled(Power);
+            Button4.setEnabled(Power);
+            Button5.setEnabled(Power);
+            Button6.setEnabled(Power);
+            Button7.setEnabled(Power);
+            Button8.setEnabled(Power);
+            Button9.setEnabled(Power);
+            ButtonAdd.setEnabled(Power);
+            ButtonReduce.setEnabled(Power);
+            ButtonLike.setEnabled(Power);
+            ButtonLike2.setEnabled(Power);
+            ButtonLike3.setEnabled(Power);
+            ButtonReset.setEnabled(Power);
     }
     public void VolumeChange(SeekBar seekBar, int i, boolean b) {
-        if (Power == false) {
-
-        }
+        if (Power == false) {}
         else {
             Volume=VolumeSeekBar.getProgress();
             ShowVolume.setText("音量:" + Volume);
